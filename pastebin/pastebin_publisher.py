@@ -2,7 +2,7 @@ from decouple import config
 import requests
 import getpass
 import sys
-from utils import get_file_type_from_extension
+from pastebin.utils import get_file_type_from_extension
 
 
 class PasteBin:
@@ -82,6 +82,3 @@ class PasteBin:
         res = requests.post(url=self.PASTE_API_URL, data=data)
         print(res.text)
 
-
-if __name__ == '__main__':
-    p = PasteBin()
